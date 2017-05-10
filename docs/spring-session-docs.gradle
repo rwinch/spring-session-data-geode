@@ -2,22 +2,15 @@ apply plugin: 'io.spring.convention.docs'
 apply plugin: 'io.spring.convention.spring-test'
 
 dependencies {
-	testCompile project(':spring-session')
-	testCompile project(':spring-session-data-redis')
-	testCompile "org.springframework:spring-jdbc"
-	testCompile "org.springframework:spring-messaging"
-	testCompile "org.springframework:spring-webmvc"
-	testCompile "org.springframework:spring-websocket"
-	testCompile "org.springframework.security:spring-security-config"
-	testCompile "org.springframework.security:spring-security-web"
-	testCompile "org.springframework.security:spring-security-test"
+	testCompile project(':spring-session-data-geode')
 	testCompile "junit:junit"
 	testCompile "org.mockito:mockito-core"
 	testCompile "org.springframework:spring-test"
 	testCompile "org.assertj:assertj-core"
-	testCompile "com.hazelcast:hazelcast"
-	testCompile "io.lettuce:lettuce-core"
+	testCompile "org.springframework.security:spring-security-test"
+	testCompile "org.springframework.security:spring-security-web"
 	testCompile "javax.servlet:javax.servlet-api"
+	testCompile slf4jDependencies
 }
 
 def versions = dependencyManagement.managedVersions
